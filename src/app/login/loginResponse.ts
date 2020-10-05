@@ -4,4 +4,5 @@ export interface LoginResponse
   username: string;
   refreshToken: string;
   expiresAt: Date;
+  message: string;
 }
