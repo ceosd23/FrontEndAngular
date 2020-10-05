@@ -1,0 +1,24 @@
+.spacer {
+  flex: 1 1 auto;
+}
+.toolbar
+{
+  background: transparent;
+}
+.button
+{
+  padding: 5px;
+  border-radius: 5px;
+
+}
+.login
+{
+  border-color: #c2185b;
+  width: 76.75px;
+
+}
+.error
+{
+  background-color: red;
+  text-decoration-color: white;
+}

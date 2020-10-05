@@ -1,0 +1,38 @@
+<div class="main">
+<mat-card class="registerCard"  >
+  <mat-card-header>
+    <mat-card-title>
+    Lets Sign Up
+    </mat-card-title>
+  </mat-card-header>
+<form [formGroup]="signUpForm" (ngSubmit)="signup()">
+  <div>
+  <mat-form-field appearance="standard" class="inputwidth">
+      <mat-label>UserName</mat-label>
+      <input [formControlName]=" 'username' " matInput required>
+      <mat-error>Please Enter Username</mat-error>
+  </mat-form-field>
+  </div>
+  <div>
+  <mat-form-field appearance="standard" class="inputwidth">
+        <mat-label>Email</mat-label>
+        <input type="email" [formControlName]=" 'email' " matInput placeholder="pat@example.com" required>
+        <mat-error>Please Enter Valid Email Address</mat-error>
+  </mat-form-field>
+  </div>
+  <div>
+  <mat-form-field appearance="standard" class="inputwidth">
+      <mat-label>Password</mat-label>
+      <input [formControlName]=" 'password' " matInput [type]="hide ? 'password' : 'text'" required>
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+       </button>
+      <mat-error>Please Provide Valid Password</mat-error>
+  </mat-form-field>
+  </div>
+  <button class="inputwidth" type="submit" mat-raised-button color="primary" [disabled]="!signUpForm.valid">Submit</button>
+</form>
+</mat-card>
+</div>
+
+

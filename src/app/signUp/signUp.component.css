@@ -1,0 +1,26 @@
+input
+{
+  color: white;
+}
+.inputwidth
+{
+  width: 100%;
+}
+.registerCard
+{
+  min-width: 150px;
+  max-width: 350px;
+  width: 100%;
+  background: #383636;
+  border-radius: 20px;
+}
+.main
+{
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: #c2185b;
+}
+
+
