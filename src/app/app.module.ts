@@ -5,13 +5,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
-import { LoginComponent } from './login/login.component';
+import { Dialog, LoginComponent } from './login/login.component';
 import { SignUpComponent } from './signUp/signUp.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxWebstorageModule } from 'ngx-webstorage';
 import { NavbarComponent } from './navbar/navbar.component';
-
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     LoginComponent,
     SignUpComponent,
     NavbarComponent,
+    Dialog,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgxWebstorageModule.forRoot()
+    NgxWebstorageModule.forRoot(),
+    MatDialogModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [ AppComponent ]

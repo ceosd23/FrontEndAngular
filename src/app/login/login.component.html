@@ -6,7 +6,6 @@
       </mat-card-title>
     </mat-card-header>
     <form [formGroup]="loginForm" (ngSubmit)="login()">
-
       <div>
         <mat-form-field appearance="standard" class="inputwidth">
           <mat-label>UserName</mat-label>
@@ -26,6 +25,6 @@
       </div>
       <button class="inputwidth" type="submit" mat-raised-button color="primary" [disabled]="!loginForm.valid">Submit</button>
     </form>
-
   </mat-card>
 </div>
+

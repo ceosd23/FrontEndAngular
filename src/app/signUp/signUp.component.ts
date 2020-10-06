@@ -50,14 +50,16 @@ export class SignUpComponent implements OnInit {
           }
           else{
             this.popup.open(data.toString(), ' ', {
-              duration: 1500
+              duration: 1500,
+              panelClass: ['mat-toolbar', 'mat-warn']
             } );
             console.log(data);
             }
         }, () =>
       {
-        this.popup.open('Network Issue', '' , {
-          duration: 1500
+        this.popup.open('Oops Connectivity Issue', '' , {
+          duration: 1500,
+          panelClass: ['mat-toolbar', 'mat-warn']
         } );
       });
   }
